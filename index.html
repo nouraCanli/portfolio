@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noura Smahat - Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <!--utiliser le CSS des icones bootstrap-->
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/14273d579a.js" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+  <header> 
+    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top"><!--"navbar" est le conteneur principal de la barre de navigation, "navbar-expand" rend la bar de nav responsive-->
+      <div class="container"><!-- permet de faire un second contenaire fixe avec une marge sur les côtés-->
+        <a class="navbar-brand text-uppercase fw-bold" href="index.html"><!-- "navbar-brand" pour styliser le texte ou le logo d'une marque dans la barre de navigation.-->
+          <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Noura</span> Smahat
+        </a>   
+        <!--le bouton bascule (toggle) de navigation qui permettra d’afficher ou masquer le menu de navigation
+        -> data-bs-toggler: spécifie l'action effectuée lorsqu'on clique sur le bouton. ici utilisé pour créer un bouton qui permet de réduire la liste non ordonnée "navbar-nav" lorsqu'on est sur un petit écran.
+        -> l'attribut data-bs-target spécifie l'ID de l'élément à réduire (la liste non ordonnée navbar-nav),
+        -> l'attribut aria-contrôles spécifie l'ID de l'élément contrôlé par le bouton (navbarnav)
+        -> L'attribut "aria-expanded" indique si l'élément contrôlé est actuellement réduit ou étendu. Défini sur "false" pour indiquer que la liste est réduite.        -> l'aria-label donne au bouton une étiquette accessible pour que les technologies d'assistance la lisent à haute voix. 
+        -> L'attribut "aria-label" fournit une étiquette ou un texte alternatif pour le bouton de basculement, qui peut être utile pour les utilisateurs de lecteurs d'écran. il est défini sur "toggle navigation" pour indiquer qu'il s'agit d'un bouton de basculement pour la navigation.        -->
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnav" 
+           aria-controls="navbarnav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarnav"><!--rajout de cette div pour le menu deroulant en responsive-->
+        <ul class="navbar-nav"> <!-- enlève les puces et met en ligne les items-->
+          <li class="nav-item active"><!--"nav-item"pour créer un élément de liste "active" utilisée pour indiquer que cet élément est actuellement sélectionné ou affiché activement.-->
+            <a class="nav-link" href="#nourasma">Qui suis-je ?</a> <!--nav link enlève le sourlignement-->
+          </li>
+          <li class="nav-item"><!--class auxilliaire qui permet d'utiliser les autres class pour modifier le style de l'item-->
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+     </div>
+    </nav>
+  </header>
+  <main>
+    <section class="py-5">
+      <div class="container"> <!--mx auto=margin auto pour centrer le contenair avec une largeur de 900px -->
+        <div class="row gy-4 gy-md-0 align-items-center"> <!-- g-4 espacement entre les colones tant qu'elles sont sur un petit écran mais pas sur écran moyen car naturellement espacées-->
+          <div class="col-12 col-md-6"><!-- dans le cas d'un petit écran les 12 colonnes seront utilisées et dans le cas d'un moyen, seul 6 (d'un ordi) car les colonnes seront côte à côte et non pas en dessous les unes des autres-->
+            <h1 class="fw-bold mt-4">Je suis Noura Smahat</br>Developpeuse en construction</h1>
+            <h2 class="fw-light">Bienvenue dans mon univers digital</h2>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="block">
+             <img src="img/codage.jpg" alt="code" class="w-100 mt-5 rounded-circle"> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 bg-light" id="nourasma">
+      <div class="container" > 
+        <h1 class="fw-bold">Mon parcours</h1>
+        <h2 class="fw-light">Developpement Web</h2>
+
+        <!-- Developpement -->
+      <div class="row mt-5 gy-4">
+        <div class="col-12 col-md-7">
+          <div class="h-100 w-100">
+            <p class="fs-5">En formation depuis 10/2022 chez Ada Tech School dans
+              le cadre de ma <span class="fw-bold">reconversion professionnelle</span>, j'y apprends les 
+              fondamentaux de la programmation à travers la réalisation de projets collectifs, 
+              avec pour objectif de devenir <span class="fw-bold"> développeuse web </span> full stack.</br></br> 
+              Je suis actuellement en <span class="fw-bold">recherche d'une entreprise</span> pour
+              m'accompagner dans ce projet d'une durée d'un an au
+              rythme de 4j/semaine avec un démarrage disponible
+              entre 08/2023 et 10/2023.</br>
+              Rythme d'alternance :
+              en entreprise du lundi au jeudi, en formation le vendredi.</p>
+          </div>
+        </div>
+        <div class="col-12 offset-md-1 col-md-4">
+          <p class="fs-5">Languages avec lesquels j'ai travaillé : </p>
+          <img src="img/logo.png" alt="code" class="w-100">
+          <img src="img/bootstrap.png" alt="code" class="w-25 mt-4">
+        </div>
+      </div>
+        <!-- Design -->
+      <div class="row gy-4 mt-5 ">
+        <div class="col-12 col-md-4 m-auto text-center"><!--text-center pour centrer le bouton -->
+          <img src="img/img_CV.png" alt="CV" class="w-100">
+          <a href="CV/CV_Noura_Smahat.pdf" download class="center-block">
+            <button type="button" class="btn btn-primary ">Telecharger mon CV</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container" id="portfolio">
+        <h1 class="fw-bold">Mon portfolio</h1>
+        <h2 class="fw-light">projets perso</h2>
+        <div class="row gy-4 mt-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img src="img/siteWeb.png" class="card-img-top" alt="projet">
+                <div class="card-body">
+                    <h5 class="card-title">Projet 1</h5>
+                    <p class="card-text">Mon Portfolio</p>
+                    <a class="btn btn-primary "data-bs-toggle="offcanvas" data-bs-target="#InfoProjet1">En savoir plus</a>
+                    <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="InfoProjet1" aria-labelledby="titleProjet1">
+                      <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="titleProjet1">Projet 1</h5>
+                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body small">
+                        <div id="carouselProjet1" class="carousel slide h-100" data-bs-ride="carousel">
+                          <div class="carousel-inner h-100">
+                            <div class="carousel-item active h-100" data-bs-interval="2000">
+                              <img src="img/siteWeb2.png" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5 class="text-dark">La création de ce site web est en lui même un projet à travers lequel j'ai appris à utiliser Bootstrap et approfondi mes connaissances en HTML. Ce site Web me servira de portfolio pour les projets réalisés et les futurs à venir.</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#arouselProjet1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselProjet1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img src="https://picsum.photos/300/150?random=2" class="card-img-top" alt="projet">
+                <div class="card-body">
+                    <h5 class="card-title">Projet 2</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-primary "data-bs-toggle="offcanvas" data-bs-target="#InfoProjet2">En savoir plus</a>
+                    <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="InfoProjet2" aria-labelledby="titleProjet2">
+                      <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="titleProjet2">Projet 2</h5>
+                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body small">
+                        <div id="carouselProjet2" class="carousel slide h-100" data-bs-ride="carousel">
+                          <div class="carousel-inner h-100">
+                            <div class="carousel-item active h-100" data-bs-interval="2000">
+                              <img src="https://picsum.photos/1920/1080?random=1 " class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide 1</h5>
+                              </div>
+                            </div>
+                            <div class="carousel-item h-100" data-bs-interval="2000">
+                              <img src="https://picsum.photos/1920/1080?random=2 " class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide 2</h5>
+                              </div>
+                            </div>
+                            <div class="carousel-item h-100" data-bs-interval="2000">
+                              <img src="https://picsum.photos/1920/1080?random=3 " class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide 3</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#arouselProjet2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselProjet2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img src="https://picsum.photos/300/150?random=3" class="card-img-top" alt="projet">
+                <div class="card-body">
+                    <h5 class="card-title">Projet 3</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-primary "data-bs-toggle="offcanvas" data-bs-target="#InfoProjet3">En savoir plus</a>
+                    <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="InfoProjet3" aria-labelledby="titleProjet3">
+                      <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="titleProjet3">Projet 3</h5>
+                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body small">
+                        <div id="carouselProjet3" class="carousel slide h-100" data-bs-ride="carousel">
+                          <div class="carousel-inner h-100">
+                            <div class="carousel-item active h-100" data-bs-interval="2000">
+                              <img src="https://picsum.photos/1920/1080?random=1 " class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide 1</h5>
+                              </div>
+                            </div>
+                            <div class="carousel-item h-100" data-bs-interval="2000">
+                              <img src="https://picsum.photos/1920/1080?random=2 " class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide 2</h5>
+                              </div>
+                            </div>
+                            <div class="carousel-item h-100" data-bs-interval="2000">
+                              <img src="https://picsum.photos/1920/1080?random=3 " class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide 3</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjet3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselProjet3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img src="https://picsum.photos/300/150?random=4" class="card-img-top" alt="projet">
+                <div class="card-body">
+                    <h5 class="card-title">Projet 4</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-primary "data-bs-toggle="offcanvas" data-bs-target="#InfoProjet4">En savoir plus</a>
+                    <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="InfoProjet4" aria-labelledby="titleProjet4">
+                      <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="titleProjet4">Projet 4</h5>
+                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body small">
+                        <div id="carouselProjet4" class="carousel slide h-100" data-bs-ride="carousel">
+                          <div class="carousel-inner h-100">
+                            <div class="carousel-item active h-100" data-bs-interval="2000">
+                              <img src="https://picsum.photos/1920/1080?random=1 " class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide 1</h5>
+                              </div>
+                            </div>
+                            <div class="carousel-item h-100" data-bs-interval="2000">
+                              <img src="https://picsum.photos/1920/1080?random=2 " class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide 2</h5>
+                              </div>
+                            </div>
+                            <div class="carousel-item h-100" data-bs-interval="2000">
+                              <img src="https://picsum.photos/1920/1080?random=3 " class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide 3</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjet4" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselProjet4" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-5" id="contact">
+      <div class="container" >
+        <h1 class="fw-bold">Une opportunité d'alternance à me proposer ?</h1>
+        <h2 class="fw-light">Discutons en ensemble !</h2>
+        <div class="row gy-4 mt-5">
+          <div class="col-12 col-md-5">
+            <img src="img/cafe.jpg" alt="coffee" class="w-100">
+          </div>
+          <div class="col-12 offset-md-1 col-md-6">
+              <form action="https://formspree.io/f/moqzrndk" method="POST" class="row"> <!--methode post pour envoyer les données du form , action fait reference à la cible-->
+                <div class="col-6 mb-3">
+                  <label for="Prenom" class="form-label" >Prenom</label>
+                  <input type="text" class="form-control" id="Prenom" name="prenom" required>
+                </div>
+                <div class="col-6 mb-3">
+                  <label for="Nom" class="form-label">Nom</label>
+                  <input type="text" class="form-control" id="Nom" name="nom" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="InputEmail" class="form-label">Addresse E-mail</label>
+                  <input type="email" class="form-control" id="InputEmail" name="email" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="Message" class="form-label">Message</label>
+                  <textarea class="form-control" id="Message" rows="4" name="message" required></textarea>
+                </div>
+                <div class="col-12 mb-3">
+                <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+              </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    </main>
+
+    <footer>
+      <div class="border-top">
+        <div class="container py-5">
+          <div class="row gy-4 align-items-center">
+           <div class="col-12 col-md-4">
+            <a class="navbar-brand text-uppercase text-dark fw-bold" href="#"><!-- "navbar-brand" pour styliser le texte ou le logo d'une marque dans la barre de navigation.-->
+            <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Noura</span> Smahat
+            </a>             
+           </div>
+           <div class="col-12 col-md-4">
+            <!-- Button trigger modal -->
+            <div class="text-md-center">
+              <a href="" class="text-decoration-none text-dark fw-bold" data-bs-toggle="modal" data-bs-target="#mentionsLegales">
+                Mentions légales
+              </a>
+            <!-- Modal -->
+            <div class="modal fade" id="mentionsLegales" tabindex="-1" aria-labelledby="mentionsLegales" aria-hidden="true">
+             <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                 <h5 class="modal-title" id="mentionsLegales">Mentions légales - 2023</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 <p>...</p>
+                </div>
+              </div>
+             </div>
+             </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 text-md-end"> <!--coller les icône sur la droite-->
+              <ul class="list-inline"> <!--enlève les puces de liste-->
+                <li class="list-inline-item ">
+                  <a href="https://www.linkedin.com/in/noura-canli-a08b14137/" target="blink" title="Linkedin" class="text-decoration-none text-dark"><i class="bi bi-linkedin fa-2x"></i>
+                  </a>
+                </li> <!--list-inline aligne les éléments de la liste-->
+                <li class="list-inline-item">
+                  <a href="#" target="blink" title="GitHub" class="text-decoration-none text-dark" ><i class="bi bi-github fa-2x"></i>
+                  </a>
+                </li> 
+              </ul>
+          </div>
+        </div>
+      </div>
+         <!-- Script js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="../js/script.js"></script>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+.block {
+    transition: transform 0.5s;
+  }
+  
+  .block:hover {
+    transform: rotatey(180deg);
+  }
